@@ -54,22 +54,22 @@ google_login.addEventListener("click", function (event) {
 
 
 
-var images = ["../Images/login-image1.jpg", "../Images/login-image2.jpg", "../Images/login-image3.jpg"];
-var currentIndex = 0;
-var sliderImage = document.getElementById("sliderImage");
+// var images = ["../Images/login-image1.jpg", "../Images/login-image2.jpg", "../Images/login-image3.jpg"];
+// var currentIndex = 0;
+// var sliderImage = document.getElementById("sliderImage");
 
-function nextImage() {
-  var nextIndex = (currentIndex + 1) % images.length;
-  var nextImage = new Image();
-  nextImage.src = images[nextIndex];
-  nextImage.classList.add("new-image");
-  nextImage.onload = function () {
-    sliderImage.src = nextImage.src;
-    currentIndex = nextIndex;
-    setTimeout(() => {
-      nextImage.classList.remove("new-image");
-    }, 100);
-  };
-}
+// function nextImage() {
+//   var nextIndex = (currentIndex + 1) % images.length;
+//   var nextImage = new Image();
+//   nextImage.src = images[nextIndex];
+//   nextImage.classList.add("new-image");
+//   nextImage.onload = function () {
+//     sliderImage.src = nextImage.src;
+//     currentIndex = nextIndex;
+//     setTimeout(() => {
+//       nextImage.classList.remove("new-image");
+//     }, 100);
+//   };
+// }
 
 setInterval(nextImage, 3000); 
