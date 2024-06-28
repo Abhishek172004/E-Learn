@@ -21,35 +21,34 @@
     
 <div class="imghead">
     <!-- header section-->    
+    
     <nav class="navbar">
-        
+
         <div class="nav_container ">
-            <a href="#" class="logo"><i class="fas fa-lightbulb"></i> educa</a>
+            <a href="home.html" class="logo"><i class="fa-solid fa-graduation-cap fa-xl"
+                    style="color: #ffffff;"></i>E-Learm</a>
             <ul class="nav_menu">
-                <li><a href="home.html">home</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="courses.html">courses</a></li>
-                <li><a href="contact.html">contact</a></li> 
-                <li><div id="account-btn" class="fas fa-user"></div></li>  
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Tutors</a></li>
+                <li><a href="chatbox.html">Live Chat</a></li>
+
+                <li>
+                    <div id="account-btn" class="fas fa-user"></div>
+                </li>
             </ul>
 
             <div class="icons">
-                
-                <button id="open-menu-btn"><i class="fa-solid fa-bars" ></i></button>
-                <button id="close-menu-btn"><i class="fa-solid fa-xmark" ></i></button>
-                <!-- <button id="menu-btn" class="fas fa-bars"></button>  -->
-                <!-- <button id="open-menu-btn" class="button">
-                    <span class="X"></span>
-                    <span class="Y"></span>
-                    <div class="close">Close</div>
-                </button> -->
+                <button id="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
+                <button id="close-menu-btn"><i class="fa-solid fa-xmark"></i></button>
+
             </div>
-            
-                
-            
+
+
+
         </div>
     </nav>
-   
 
     <section class="about_achievements">
         <div class="container about_achievements-container">
@@ -297,5 +296,25 @@
 
 
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../JS/home.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            //when window width is greater than 600px i.e. tab or desktop
+            //media queries
+            breakpoints:{
+                600:{
+                    //for screen size>=600, it will show 2 slides
+                    slidesPerView: 2
+                }
+            }
+        });
+        </script>
 </body>
 </html>
